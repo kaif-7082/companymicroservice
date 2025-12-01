@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import java.util.HashMap;
 import java.util.Map;
 
-// This class was added from the monolith project
 @Slf4j
 @RestControllerAdvice
 public class GlobalExceptionHandler {

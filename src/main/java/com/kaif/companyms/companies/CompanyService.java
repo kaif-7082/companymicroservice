@@ -23,7 +23,6 @@ public interface CompanyService {
 
     companyResponseDto getCompanyDtoById(Long id); // New: Return DTO for controller
 
-    // --- Features from Monolith ---
 
     List<Company> findCompaniesWithSorting(String field);
 

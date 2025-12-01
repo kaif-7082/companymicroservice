@@ -166,7 +166,6 @@ public class CompanyServiceImplementation implements CompanyService {
         }
     }
 
-    // --- Helper Mappers ---
 
     private companyResponseDto mapToDto(Company company) {
         companyResponseDto dto = new companyResponseDto();

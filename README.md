@@ -18,7 +18,20 @@
 
 * Spring Security (JWT)
 
-**Configuration**
+**Configuration** This service supports multiple profiles for different environments:
+
+**Development (Dev)**
+
+* Profile: dev
+
+* Port: 8091
+
+* Database: H2 In-Memory
+
+**Production (Prod)**
+
+* Profile: prod
+
 * Port: 8081
 
 * Database: MySQL (companyms_db)
@@ -38,7 +51,7 @@
 
 * Data Integrity Validation: Prevents duplicate entries by validating company names before creation or updates. Ensures that critical operations (like deletions) handle non-existent entities gracefully.
 
-**API Endpoints (Partial)**
+**API Endpoints**
 
 | Method | Endpoint | Description | Auth |
 
@@ -59,7 +72,10 @@
 
 Infrastructure: Ensure MySQL, Kafka, Zookeeper, Zipkin, and Eureka are running.
 
-Run:
-
+Run (default/dev):
 
 ./mvnw spring-boot:run
+
+Run (prod):
+
+./mvnw spring-boot:run -Dspring.profiles.active=prod
