@@ -17,7 +17,7 @@ public class ReviewMessageConsumer {
         this.reviewClient = reviewClient;
     }
 
-    @KafkaListener(topics = "companyRatingQueue", groupId = "company-group")
+    @KafkaListener(topics = "${spring.kafka.topic.name}", groupId = "company-group")
     public void consumeMessage(ReviewMessage message) {
         System.out.println("Consumed Message: " + message);
 
